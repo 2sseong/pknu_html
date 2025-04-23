@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>네이버 스타일 연습 페이지</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Malgun Gothic", sans-serif;
+        background-color: #f5f6f7;
+      }
+      .naver-header {
+        background-color: #03c75a;
+        padding: 10px 20px;
+        color: white;
+        display: flex;
+        align-items: center;
+      }
+      .naver-logo {
+        font-size: 24px;
+        font-weight: bold;
+      }
+      .naver-nav {
+        background-color: white;
+        padding: 10px 0;
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid #ccc;
+      }
+      .naver-nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+      }
+      .search-box {
+        text-align: center;
+        margin-top: 100px;
+      }
+      .search-box input {
+        width: 400px;
+        padding: 12px;
+        font-size: 16px;
+        border: 2px solid #03c75a;
+        border-radius: 4px;
+      }
+      .search-box button {
+        padding: 12px 20px;
+        font-size: 16px;
+        background-color: #03c75a;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        margin-left: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="naver-header">
+      <div class="naver-logo">NAVER</div>
+    </div>
+
+    <div class="naver-nav">
+      <a href="#">메일</a>
+      <a href="#">카페</a>
+      <a href="#">블로그</a>
+      <a href="#">지식인</a>
+      <a href="#">쇼핑</a>
+      <a href="#">뉴스</a>
+    </div>
+
+    <div class="search-box">
+      <input type="text" placeholder="검색어를 입력하세요" />
+      <button>검색</button>
+    </div>
+  </body>
+</html>

@@ -8,18 +8,52 @@
   <body>
     <h1 style="background-color: lightgreen">HTML 실습</h1>
     <h2 style="background-color: olive">1일차</h2>
-    <a href="./1일차/ex01-01.html">예제1</a><br />
-    <a href="./1일차/ex01-02.html">예제2</a><br />
-    <a href="./1일차/ex01-03.html">예제3</a><br />
-    <a href="./1일차/ex01-04.html">예제4</a><br />
-    <a href="./1일차/ex01-05.html">예제5</a><br />
-    <a href="./1일차/ex01-06.html">예제6</a><br />
-    <a href="./1일차/ex01-07.html">예제7</a><br />
-    <a href="./1일차/ex01-08.html">예제8</a><br />
-    <a href="./1일차/ex01-09.html">예제9</a><br />
-    <a href="./1일차/과제.html">과제</a><br />
+    <select name="path" id="dropdown" style="width: 200px; height: 100px">
+      <option value="./1일차/ex01-01.html">예제1</option>
+      <option value="./1일차/ex01-02.html">예제2</option>
+      <option value="./1일차/ex01-03.html">예제3</option>
+      <option value="./1일차/ex01-04.html">예제4</option>
+      <option value="./1일차/ex01-05.html">예제5</option>
+      <option value="./1일차/ex01-06.html">예제6</option>
+      <option value="./1일차/ex01-07.html">예제7</option>
+      <option value="./1일차/ex01-08.html">예제8</option>
+      <option value="./1일차/ex01-09.html">예제9</option>
+      <option value="./1일차/과제.html">과제</option>
+    </select>
+
+    <form onsubmit="navigatePage(event)">
+      <input type="submit" style="width: 100px; height: 50px" />
+    </form>
+    <hr />
 
     <h2 style="background-color: olive">2일차</h2>
-    <a href="ex02-01.html">a1</a>
+    <a href="./2일차/a1.html">a1</a><br />
+    <a href="./2일차/a2.html">a2</a> <br />
+    <a href="./2일차/ex02-01.html">예제1</a><br />
+    <a href="./2일차/ex02-02.html">예제2</a><br />
+    <a href="./2일차/ex02-03.html">예제3</a><br />
+    <a href="./2일차/ex02-04.html">예제4</a> <br />
+    <a href="./2일차/ex02-05.html">예제5</a> <br />
+    <a href="./2일차/ex02-06.html">예제6</a> <br />
+    <a href="./2일차/ex02-07.html">예제7</a> <br />
+    <a href="./2일차/ex02-08.html">예제8</a> <br />
+    <a href="./2일차/ex02-09.html">예제9</a> <br />
+    <a href="./2일차/list.html">리스트연습</a> <br />
+    <a href="./2일차/RCP.html">테이블연습</a>
+    <hr />
+
+    <script>
+      function navigatePage(event) {
+        event.preventDefault(); // 기본 폼 제출 방지
+        const dropdown = document.getElementById("dropdown");
+        const selectedValue = dropdown.value;
+
+        if (selectedValue) {
+          window.location.href = selectedValue; // 선택한 HTML 파일로 이동
+        } else {
+          alert("옵션을 선택해주세요."); // 옵션을 선택하지 않았을 경우 알림 표시
+        }
+      }
+    </script>
   </body>
 </html>

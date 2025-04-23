@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="../index.html">홈으로</a>
+    <!-- div>span+p+div>p -->
+    <fieldset>
+      <legend>패턴테스트</legend>
+      <!-- form>(input+br)*3+div -->
+      <form action="ex02-01a.html">
+        이름: <input type="text" pattern="[가-힣]{3}" required /><br />
+        Phone: <input type="text" pattern="[0-9]{11}" required /><br />
+        Etc: <input type="text" value="하이요" readonly /> <br />
+        <input type="submit" /><br />
+        <div><em> 패턴에 맞출것</em></div>
+      </form>
+    </fieldset>
+  </body>
+</html>
