@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        height: 800px;
+        font-size: 3rem;
+        /* px, %, vh, vw   */
+      }
+      tr,
+      td {
+        border: 1px solid #ccc;
+      }
+      #nav {
+        height: 10%;
+        background-color: rgb(190, 0, 143);
+      }
+      #header,
+      #footer {
+        height: 15%;
+        background-color: rgb(255, 0, 157);
+      }
+      .main-aside {
+        font-size: 1rem;
+      }
+    </style>
+    <script></script>
+  </head>
+  <body>
+    <a href="../index.html">홈으로</a>
+    <table>
+      <colgroup>
+        <col style="width: 70%" />
+        <col />
+      </colgroup>
+      <tr>
+        <td colspan="2" id="header">header</td>
+      </tr>
+      <tr id="nav">
+        <td colspan="2">nav</td>
+      </tr>
+      <tr class="main-aside">
+        <td style="background-color: palevioletred">
+          main
+          <hr />
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex ut quidem
+          consequuntur iusto corrupti, cum rerum at ab aperiam non molestias sed
+          expedita facilis facere labore a possimus nostrum dolorem! Unde quam
+          labore quos hic ipsa fugit amet voluptate maiores, incidunt modi,
+          dolore reprehenderit vitae architecto. Rerum quas maiores vitae?
+        </td>
+        <td style="background-color: mediumvioletred">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti
+          deleniti adipisci vero, deserunt et enim quae dolor doloremque
+          quibusdam tenetur aspernatur sapiente accusantium molestiae vel quis
+          corporis. Suscipit, debitis quasi!
+        </td>
+      </tr>
+      <tr id="footer">
+        <td colspan="2">footer</td>
+      </tr>
+    </table>
+  </body>
+</html>

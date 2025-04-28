@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가상선택자</title>
+    <style>
+      h1 + a {
+        color: green;
+      }
+      h1 + a:visited {
+        color: yellow;
+      }
+      /* 버튼과 인풋이 비활성화 되었을 때, 단 a링크는 동작안함 */
+      button:disabled,
+      input:disabled {
+        background-color: gray;
+      }
+      /* 선택되는동안 */
+      input:focus {
+        background-color: rgb(255, 0, 255);
+      }
+      /* 커서가 있는동안 */
+      input:active {
+        background-color: yellow;
+      }
+      .홍준표:focus {
+        background-color: red;
+      }
+      .이재명:focus {
+        background-color: blue;
+      }
+      div {
+        border: 1px solid black;
+        width: 20px;
+        height: 20px;
+        margin: 5px;
+        background-color: gray;
+        display: inline-block;
+      }
+      div:hover {
+        width: 100px;
+        height: 100px;
+        background-color: hotpink;
+      }
+      input[type]:checked + label {
+        color: red;
+        text-decoration: line-through;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="../index.html">홈으로</a>
+    <h1>가상선택자 응용</h1>
+    <a href="https://naver.com">네이버</a> <br />
+    <input type="text" />
+    <button disabled>전송</button>
+    <hr />
+    <input type="text" class="홍준표" value="클릭하면 빨갛게 변합니다" /><br />
+    <input type="text" class="이재명" value="클릭하면 파랗게 변합니다" />
+    <hr />
+    <div>가</div>
+    <div>나</div>
+    <div>다</div>
+    <div>라</div>
+    <div>마</div>
+    <div>바</div>
+    <div>사</div>
+    <div>아</div>
+    <div>자</div>
+    <div>차</div>
+    <hr />
+    <input type="checkbox" id="meal" />
+    <label for="meal">식사</label>
+    <input type="checkbox" id="eat" />
+    <label for="eat">간식</label>
+  </body>
+</html>

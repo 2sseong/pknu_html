@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자식선택자</title>
+    <style>
+      * {
+        background-color: rgb(159, 207, 255);
+      }
+      div > p {
+        color: rgb(230, 60, 230);
+      }
+    </style>
+  </head>
+  <body>
+    <a href="../index.html">홈으로</a>
+    <!-- div>p+ul>(li>p{$주차 여행지})*2^P{8월의 여행지}^P{내년의 여행지} -->
+    <div>
+      <p>7월의 여행지</p>
+      <ul>
+        <li>
+          <p>1주차 여행지</p>
+        </li>
+        <li>
+          <p>2주차 여행지</p>
+        </li>
+      </ul>
+      <p>8월의 여행지</p>
+    </div>
+    <p>내년의 여행지</p>
+  </body>
+</html>
