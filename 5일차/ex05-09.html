@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        width: 100px;
+        height: 60px;
+        font-size: 30px;
+        background-color: white;
+        box-shadow: 5px 5px 10px black;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="../index.html">홈으로</a> <br />
+    <button id="dynamicButton">do it</button>
+
+    <script>
+      const button = document.getElementById("dynamicButton");
+      let offset = 0;
+
+      setInterval(() => {
+        offset += 1; // 변경 폭
+        button.style.boxShadow = `${5 + offset}px ${5 + offset}px ${
+          10 + offset
+        }px black`;
+
+        // 번짐 초기화 조건 예시 (선택 사항)
+        if (offset > 20 && offset <= 30) {
+          button.style.boxShadow = `${5 + offset}px ${5 + offset}px ${
+            10 + offset
+          }px blue`;
+        }
+        if (offset > 30) {
+          offset = 0; // 초기화
+        }
+      }, 100); // 100ms마다 변화
+    </script>
+  </body>
+</html>

@@ -9,117 +9,148 @@
         border-collapse: collapse;
         background-color: beige;
         width: 100%;
-        height: 100%;
+        /* height: 100%; */
       }
       th,
       td {
         vertical-align: top;
         border: 1px solid #5b1fff;
+        height: 10px;
       }
       [name="sub"] {
         background-color: lawngreen;
         text-align: center;
       }
+      .table-wrapper {
+        max-height: 600px;
+        overflow: auto;
+      }
+      thead {
+        position: sticky;
+        top: 0;
+      }
     </style>
   </head>
   <body>
-    <table>
-      <colgroup>
-        <col style="width: 25%" />
-        <col style="width: 25%" />
-        <col style="width: 25%" />
-      </colgroup>
-      <thead style="height: 30%">
-        <tr>
-          <th
-            colspan="4"
-            style="background-color: lightgreen; text-align: center"
-          >
-            <h1>HTML 실습</h1>
-          </th>
-        </tr>
-      </thead>
-      <tbody style="height: 70%">
-        <tr>
-          <td>
-            <h2 name="sub">1일차</h2>
-            <select
-              name="path"
-              id="dropdown"
-              style="width: 200px; height: 100px"
+    <div class="table-wrapper">
+      <table>
+        <colgroup>
+          <col style="width: 25%" />
+          <col style="width: 25%" />
+          <col style="width: 25%" />
+        </colgroup>
+        <thead>
+          <tr>
+            <th
+              colspan="4"
+              style="background-color: lightgreen; text-align: center"
             >
-              <option value="./1일차/ex01-01.html">예제1</option>
-              <option value="./1일차/ex01-02.html">예제2</option>
-              <option value="./1일차/ex01-03.html">예제3</option>
-              <option value="./1일차/ex01-04.html">예제4</option>
-              <option value="./1일차/ex01-05.html">예제5</option>
-              <option value="./1일차/ex01-06.html">예제6</option>
-              <option value="./1일차/ex01-07.html">예제7</option>
-              <option value="./1일차/ex01-08.html">예제8</option>
-              <option value="./1일차/ex01-09.html">예제9</option>
-              <option value="./1일차/과제.html">과제</option>
-            </select>
-            <form onsubmit="navigatePage(event)">
-              <input
-                type="submit"
-                style="width: 100px; height: 50px"
-                value="들어가기"
-              />
-            </form>
-          </td>
-          <td>
-            <h2 name="sub">2일차</h2>
-            <a href="./2일차/a1.html">a1</a><br />
-            <a href="./2일차/a2.html">a2</a> <br />
-            <a href="./2일차/ex02-01.html">예제1</a><br />
-            <a href="./2일차/ex02-02.html">예제2</a><br />
-            <a href="./2일차/ex02-03.html">예제3</a><br />
-            <a href="./2일차/ex02-04.html">예제4</a> <br />
-            <a href="./2일차/ex02-05.html">예제5</a> <br />
-            <a href="./2일차/ex02-06.html">예제6</a> <br />
-            <a href="./2일차/ex02-07.html">예제7</a> <br />
-            <a href="./2일차/ex02-08.html">예제8</a> <br />
-            <a href="./2일차/ex02-09.html">예제9</a> <br />
-            <a href="./2일차/list.html">리스트연습</a> <br />
-            <a href="./2일차/RCP.html">테이블연습</a>
-          </td>
-          <td>
-            <h2 name="sub">3일차</h2>
-            <a href="./3일차/ex03-01.html">예제1</a><br />
-            <a href="./3일차/ex03-01a.html">예제1a</a> <br />
-            <a href="./3일차/ex03-02.html">예제2</a><br />
-            <a href="./3일차/ex03-03.html">예제3</a><br />
-            <a href="./3일차/ex03-04.html">예제4</a> <br />
-            <a href="./3일차/ex03-05.html">예제5</a> <br />
-          </td>
-          <td>
-            <h2 name="sub">4일차</h2>
-            <a href="./4일차/ex04-01.html">예제1</a><br />
-            <a href="./4일차/ex04-02.html">예제2</a> <br />
-            <a href="./4일차/ex04-03.html">예제3</a> <br />
-            <a href="./4일차/ex04-04.html">예제4</a> <br />
-            <a href="./4일차/ex04-05.html">예제5</a> <br />
-            <a href="./4일차/ex04-06.html">예제6</a> <br />
-            <a href="./4일차/ex04-06a.html">예제6a</a> <br />
-            <a href="./4일차/ex04-06b.html">예제6b</a> <br />
-            <a href="./4일차/ex04-06c.html">예제6c</a> <br />
-            <a href="./4일차/ex04-07.html">예제7</a> <br />
-            <a href="./4일차/ex04-08.html">예제8</a> <br />
-            <a href="./4일차/ex04-09.html">예제9</a> <br />
-            <a href="./4일차/ex04-10.html">예제10</a> <br />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <h2 name="sub">5일차</h2>
-            <a href="./5일차/ex05-01.html">예제1</a>
-          </td>
-          <td><h2 name="sub">6일차</h2></td>
-          <td><h2 name="sub">7일차</h2></td>
-          <td><h2 name="sub">8일차</h2></td>
-        </tr>
-      </tbody>
-    </table>
+              <h1>HTML 실습</h1>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <h2 name="sub">1일차</h2>
+              <select
+                name="path"
+                id="dropdown"
+                style="width: 200px; height: 100px"
+              >
+                <option value="./1일차/ex01-01.html">예제1</option>
+                <option value="./1일차/ex01-02.html">예제2</option>
+                <option value="./1일차/ex01-03.html">예제3</option>
+                <option value="./1일차/ex01-04.html">예제4</option>
+                <option value="./1일차/ex01-05.html">예제5</option>
+                <option value="./1일차/ex01-06.html">예제6</option>
+                <option value="./1일차/ex01-07.html">예제7</option>
+                <option value="./1일차/ex01-08.html">예제8</option>
+                <option value="./1일차/ex01-09.html">예제9</option>
+                <option value="./1일차/과제.html">과제</option>
+              </select>
+              <form onsubmit="navigatePage(event)">
+                <input
+                  type="submit"
+                  style="width: 100px; height: 50px"
+                  value="들어가기"
+                />
+              </form>
+            </td>
+            <td>
+              <h2 name="sub">2일차</h2>
+              <a href="./2일차/a1.html">a1</a><br />
+              <a href="./2일차/a2.html">a2</a> <br />
+              <a href="./2일차/ex02-01.html">예제1</a><br />
+              <a href="./2일차/ex02-02.html">예제2</a><br />
+              <a href="./2일차/ex02-03.html">예제3</a><br />
+              <a href="./2일차/ex02-04.html">예제4</a> <br />
+              <a href="./2일차/ex02-05.html">예제5</a> <br />
+              <a href="./2일차/ex02-06.html">예제6</a> <br />
+              <a href="./2일차/ex02-07.html">예제7</a> <br />
+              <a href="./2일차/ex02-08.html">예제8</a> <br />
+              <a href="./2일차/ex02-09.html">예제9</a> <br />
+              <a href="./2일차/list.html">리스트연습</a> <br />
+              <a href="./2일차/RCP.html">테이블연습</a>
+            </td>
+            <td>
+              <h2 name="sub">3일차</h2>
+              <a href="./3일차/ex03-01.html">예제1</a><br />
+              <a href="./3일차/ex03-01a.html">예제1a</a> <br />
+              <a href="./3일차/ex03-02.html">예제2</a><br />
+              <a href="./3일차/ex03-03.html">예제3</a><br />
+              <a href="./3일차/ex03-04.html">예제4</a> <br />
+              <a href="./3일차/ex03-05.html">예제5</a> <br />
+            </td>
+            <td>
+              <h2 name="sub">4일차</h2>
+              <a href="./4일차/ex04-01.html">예제1</a><br />
+              <a href="./4일차/ex04-02.html">예제2</a> <br />
+              <a href="./4일차/ex04-03.html">예제3</a> <br />
+              <a href="./4일차/ex04-04.html">예제4</a> <br />
+              <a href="./4일차/ex04-05.html">예제5</a> <br />
+              <a href="./4일차/ex04-06.html">예제6</a> <br />
+              <a href="./4일차/ex04-06a.html">예제6a</a> <br />
+              <a href="./4일차/ex04-06b.html">예제6b</a> <br />
+              <a href="./4일차/ex04-06c.html">예제6c</a> <br />
+              <a href="./4일차/ex04-07.html">예제7</a> <br />
+              <a href="./4일차/ex04-08.html">예제8</a> <br />
+              <a href="./4일차/ex04-09.html">예제9</a> <br />
+              <a href="./4일차/ex04-10.html">예제10</a> <br />
+            </td>
+          </tr>
+          <tr>
+            <td class="table-wrapper">
+              <h2 name="sub">5일차</h2>
+              <a href="./5일차/ex05-01.html">예제1</a><br />
+              <a href="./5일차/ex05-02.html">예제2</a> <br />
+              <a href="./5일차/ex05-03.html">예제3</a> <br />
+              <a href="./5일차/ex05-04.html">예제4</a> <br />
+              <a href="./5일차/ex05-05.html">예제5</a> <br />
+              <a href="./5일차/ex05-06.html">예제6</a> <br />
+              <a href="./5일차/ex05-07.html">예제7</a> <br />
+              <a href="./5일차/ex05-08.html">예제8</a> <br />
+              <a href="./5일차/ex05-08a.html">예제8a</a> <br />
+              <a href="./5일차/ex05-09.html">예제9</a> <br />
+              <a href="./5일차/ex05-09a.html">예제9a</a> <br />
+              <a href="./5일차/ex05-09b.html">예제9b</a> <br />
+              <a href="./5일차/ex05-10.html">예제10</a> <br />
+              <a href="./5일차/ex05-10a.html">예제10a</a> <br />
+              <a href="./5일차/ex05-10b.html">예제10b</a> <br />
+              <a href="./5일차/ex05-11.html">예제11</a> <br />
+              <a href="./5일차/ex05-11a.html">예제11a</a> <br />
+              <a href="./5일차/ex05-12.html">예제12</a> <br />
+              <a href="./5일차/ex05-13.html">예제13</a> <br />
+              <a href="./5일차/ex05-13a.html">예제13a</a> <br />
+              <a href="./5일차/ex05-14.html">예제14</a> <br />
+            </td>
+            <td><h2 name="sub">6일차</h2></td>
+            <td><h2 name="sub">7일차</h2></td>
+            <td><h2 name="sub">8일차</h2></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
     <script>
       function navigatePage(event) {
