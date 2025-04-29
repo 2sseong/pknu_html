@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      li {
+        list-style: none;
+        float: left;
+        padding: 0 15px;
+        cursor: pointer;
+      }
+      li::after {
+        content: "|";
+        color: #777;
+        margin-right: -17px;
+        float: right;
+      }
+      li:nth-last-of-type(1)::after {
+        content: "";
+      }
+    </style>
+  </head>
+  <body>
+    <a href="../index.html">홈으로</a>
+    <ul>
+      <li>로그인</li>
+      <li>회원가입</li>
+      <li>마이페이지</li>
+      <li>사이트맵</li>
+      <li>고객센터</li>
+    </ul>
+    <script>
+      const pt = document.querySelector("li");
+      pt.addEventListener("click", () => {
+        alert("누르지마");
+      }); /*pt에 기능부여*/
+    </script>
+  </body>
+</html>
