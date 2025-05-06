@@ -32,10 +32,17 @@
       <li>고객센터</li>
     </ul>
     <script>
-      const pt = document.querySelector("li");
-      pt.addEventListener("click", () => {
-        alert("누르지마");
-      }); /*pt에 기능부여*/
+      const pt = document.querySelectorAll("li");
+
+      pt.forEach((v) => {
+        v.addEventListener("click", () => {
+          alert(v.textContent + " 누름");
+        });
+      });
+      // const pt = document.querySelector("li");
+      // pt.addEventListener("click", () => {
+      //   alert("누르지마");
+      // }); /*pt에 기능부여*/
     </script>
   </body>
 </html>
