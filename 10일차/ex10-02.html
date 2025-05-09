@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: plum;
+      }
+      .post-list {
+        width: 800px;
+        margin: auto;
+        position: relative;
+      }
+      .post {
+        border: 1px solid #000;
+        background-color: beige;
+        padding: 1.5rem;
+        margin-bottom: -70px;
+        border-radius: 12px;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+        position: relative;
+        transition: 0.3s ease-in;
+      }
+      .post:hover {
+        transform: translateY(-40px);
+        z-index: 100;
+      }
+      .post h3 {
+        margin: 0;
+        color: #333;
+      }
+      .post p {
+        color: #555;
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="../index.html">홈으로</a>
+    <!-- div.post-list>(div.post>h3{제목$}+p{내용$}+{2025년 05월 $일})*7 -->
+    <div class="post-list">
+      <div class="post">
+        <h3>제목1</h3>
+        <p>
+          내용1 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          Voluptatem itaque molestiae voluptas officia libero impedit illo
+          dignissimos quos, cupiditate molestias?
+        </p>
+        2025년 05월 1일
+      </div>
+      <div class="post">
+        <h3>제목2</h3>
+        <p>
+          내용2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+          velit aliquam quia rerum sequi nobis autem quaerat culpa ipsam
+          explicabo?
+        </p>
+        2025년 05월 2일
+      </div>
+      <div class="post">
+        <h3>제목3</h3>
+        <p>
+          내용3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+          asperiores sint rerum nemo, enim inventore porro modi commodi
+          provident soluta?
+        </p>
+        2025년 05월 3일
+      </div>
+      <div class="post">
+        <h3>제목4</h3>
+        <p>
+          내용4 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia
+          nobis explicabo at error eos a aliquid itaque. Dignissimos, assumenda.
+          Autem.
+        </p>
+        2025년 05월 4일
+      </div>
+      <div class="post">
+        <h3>제목5</h3>
+        <p>
+          내용5 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          Doloribus molestias fugiat fugit dolores ipsa tenetur earum
+          recusandae, atque veniam ad.
+        </p>
+        2025년 05월 5일
+      </div>
+      <div class="post">
+        <h3>제목6</h3>
+        <p>
+          내용6 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          Dolorem harum explicabo ipsum aliquid assumenda officiis ex similique
+          quod ratione vero?
+        </p>
+        2025년 05월 6일
+      </div>
+      <div class="post">
+        <h3>제목7</h3>
+        <p>
+          내용7 Lorem ipsum dolor sit amet consectetur adipisicing elit. A
+          corrupti rem possimus maiores, accusamus consequatur nulla odit
+          delectus enim maxime.
+        </p>
+        2025년 05월 7일
+      </div>
+    </div>
+  </body>
+</html>

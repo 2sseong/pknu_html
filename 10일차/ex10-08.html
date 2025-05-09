@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        background-color: azure;
+        padding: 2rem;
+      }
+      .chat-container {
+        width: 600px;
+        height: 500px;
+        margin: auto;
+        background-color: white;
+        padding: 1rem 4rem;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+      }
+      .message {
+        display: flex;
+        margin-bottom: 1.2rem;
+        align-items: end;
+      }
+      .message.bot {
+        justify-content: start;
+      }
+      .message.user {
+        justify-content: end;
+      }
+      .bubble {
+        max-width: 300px;
+        position: relative;
+        background-color: blueviolet;
+        padding: 0.7rem 1rem;
+        border-radius: 20px;
+        word-break: break-word;
+      }
+      .name {
+        font-size: 0.8rem;
+        color: #555;
+        margin: 0 10px 2px;
+      }
+      .user .bubble {
+        background-color: yellow;
+      }
+      .user .name {
+        text-align: right;
+      }
+
+      .chat-container::-webkit-scrollbar {
+        background-color: white;
+      }
+      .chat-container::-webkit-scrollbar-thumb {
+        background-color: rgb(190, 185, 255);
+        border-radius: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="../index.html">홈으로</a>
+    <!-- div.chat-container>div.message.bot>div.avatar>div.name{myBot}+div.bubble{안녕하세요. 무엇을 도와드릴까요}^^div.message.user>div.avatar>div.name{myBot}+div.bubble{안녕하세요. 무엇을 도와드릴까요} -->
+    <div class="chat-container">
+      <div class="message bot">
+        <div class="avatar">
+          <div class="name">myBot</div>
+          <div class="bubble">안녕하세요. 무엇을 도와드릴까요</div>
+        </div>
+      </div>
+      <div class="message user">
+        <div class="avatar">
+          <div class="name">나</div>
+          <div class="bubble">가나다라마바사아자차카타파하</div>
+        </div>
+      </div>
+      <div class="message bot">
+        <div class="avatar">
+          <div class="name">myBot</div>
+          <div class="bubble">
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+          </div>
+        </div>
+      </div>
+      <div class="message user">
+        <div class="avatar">
+          <div class="name">나</div>
+          <div class="bubble">ㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱ</div>
+        </div>
+      </div>
+      <div class="message bot">
+        <div class="avatar">
+          <div class="name">myBot</div>
+          <div class="bubble">ㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴ</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
