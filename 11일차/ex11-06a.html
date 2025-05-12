@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        background-color: bisque;
+        border: 1px solid black;
+        border-collapse: collapse;
+        font-size: 3rem;
+        text-align: center;
+        box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.8);
+      }
+      td {
+        border: 1px solid black;
+        width: 300px;
+      }
+    </style>
+    <script>
+      const inp = prompt("원하는 값을 입력하세요.");
+      const list = `<h1>${inp}단</h1>
+      <table>
+      <tr>
+        <td colspan="2">${inp}단</td>
+      </tr>
+      <tr>
+        <td>${inp}x1</td>
+        <td>${inp}</td>
+      </tr>
+      <tr>
+        <td>${inp}x2</td>
+        <td>${inp * 2}</td>
+      </tr>
+      <tr>
+        <td>${inp}x3</td>
+        <td>${inp * 3}</td>
+      </tr>
+      <tr>
+        <td>${inp}x4</td>
+        <td>${inp * 4}</td>
+      </tr>
+      <tr>
+        <td>${inp}x5</td>
+        <td>${inp * 5}</td>
+      </tr>
+      <tr>
+        <td>${inp}x6</td>
+        <td>${inp * 6}</td>
+      </tr>
+      <tr>
+        <td>${inp}x7</td>
+        <td>${inp * 7}</td>
+      </tr>
+      <tr>
+        <td>${inp}x8</td>
+        <td>${inp * 8}</td>
+      </tr>
+      <tr>
+        <td>${inp}x9</td>
+        <td>${inp * 9}</td>
+      </tr>
+    </table>`;
+      console.log(list);
+      document.write(list);
+    </script>
+  </head>
+  <body>
+    <a href="../index.html">홈으로</a>
+  </body>
+</html>

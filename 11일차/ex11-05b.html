@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        background-color: beige;
+        padding: 20px;
+      }
+    </style>
+    <script>
+      const pt = prompt("값을 입력하세요");
+      console.log(pt);
+      result1 = pt * 0.9;
+      result2 = pt * 0.8;
+      result3 = pt * 0.7;
+      console.log(result1);
+      document.write(
+        "<table style='border:1px solid black; text-align:center'><tr style='background-color:blue'><td style='color:white'>원가:</td><td style='color:white'>" +
+          pt +
+          "원</td></tr><tr style='background-color:skyblue'><td>10% 할인된 값:</td><td>" +
+          result1 +
+          "원</td></tr><tr style='background-color:skyblue'><td>20% 할인된 값:</td><td>" +
+          result2 +
+          "원</td></tr><tr style='background-color:skyblue'><td>30% 할인된 값:</td><td>" +
+          result3 +
+          "원</td></tr></table>"
+      );
+    </script>
+  </head>
+  <body>
+    <a style="vertical-align: top" href="../index.html">홈으로</a>
+    <!--     
+    <table>
+      <tr>
+        <td>10% 할인된 값:</td>
+        <td>"+result1+"</td>
+      </tr>
+      <tr>
+        <td>20% 할인된 값:</td>
+        <td>"+result2+"</td>
+      </tr>
+      <tr>
+        <td>30% 할인된 값:</td>
+        <td>"+result3+"</td>
+      </tr>
+    </table> -->
+  </body>
+</html>
