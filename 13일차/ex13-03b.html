@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      table {
+        background-color: rgb(216, 244, 255);
+        width: 200px;
+        height: 500px;
+        border-collapse: collapse;
+        box-shadow: 10px 10px 20px black;
+        text-align: center;
+        font-size: large;
+      }
+      td {
+        border: 2px solid white;
+      }
+      tr:nth-of-type(even) {
+        background-color: rgb(121, 217, 255);
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // const inp = 0;
+      let list = `<a href="../index.html">홈으로</a>`;
+      for (let inp = 2; inp < 10; inp++) {
+        list += `<table><tr><th colspan="2">구구단${inp}단</th></tr>`;
+        for (let i = 1; i < 10; i++) {
+          list += `<tr><td>${inp} x${i}</td><td> ${inp * i}</td></tr>`;
+        }
+        list += `</table>`;
+      }
+      document.body.innerHTML = list;
+    </script>
+  </body>
+</html>

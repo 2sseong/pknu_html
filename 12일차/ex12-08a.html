@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border: 1px solid black;
+        border-collapse: collapse;
+        width: 100%;
+        height: 100px;
+        text-align: center;
+      }
+      td {
+        border: 1px solid black;
+        height: 33%;
+        width: 1%;
+      }
+      tr:nth-of-type(2) > td:nth-of-type(-n + 6) {
+        background-color: blue;
+      }
+      tr:nth-of-type(2) > td:nth-of-type(n + 7):nth-of-type(-n + 10) {
+        background-color: skyblue;
+      }
+      tr:nth-of-type(2) > td:nth-of-type(n + 11):nth-of-type(-n + 14) {
+        background-color: yellow;
+      }
+      tr:nth-of-type(2) > td:nth-of-type(n + 15):nth-of-type(-n + 17) {
+        background-color: rgb(255, 255, 207);
+      }
+      tr:nth-of-type(2) > td:nth-of-type(n + 18):nth-of-type(-n + 23) {
+        background-color: red;
+      }
+      h1 {
+        animation: color 2s infinite ease-in;
+      }
+      @keyframes color {
+        0% {
+          color: red;
+        }
+        20% {
+          color: yellow;
+        }
+        40% {
+          color: skyblue;
+        }
+        60% {
+          color: blue;
+        }
+        80% {
+          color: purple;
+        }
+        100% {
+          color: rebeccapurple;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a href="../index.html">홈으로</a>
+    <table>
+      <tr>
+        <td colspan="6">16미만</td>
+        <td colspan="4">16이상~22미만</td>
+        <td colspan="4">22이상~28미만</td>
+        <td colspan="3">28이상~32 미만</td>
+        <td colspan="6">32이상</td>
+      </tr>
+      <tr>
+        <td class="tp"></td>
+        <td class="tp"></td>
+        <td class="tp"></td>
+        <td class="tp"></td>
+        <td class="tp"></td>
+        <td class="tp"></td>
+        <td class="tp"></td>
+        <td class="tp"></td>
+        <td class="tp"></td>
+        <td class="tp"></td>
+        <td class="tp"></td>
+        <td class="tp"></td>
+        <td class="tp"></td>
+        <td class="tp"></td>
+        <td class="tp"></td>
+        <td class="tp"></td>
+        <td class="tp"></td>
+        <td class="tp"></td>
+        <td class="tp"></td>
+        <td class="tp"></td>
+        <td class="tp"></td>
+        <td class="tp"></td>
+        <td class="tp"></td>
+      </tr>
+      <tr>
+        <td colspan="6" id="one"></td>
+        <td colspan="4" id="two"></td>
+        <td colspan="4" id="three"></td>
+        <td colspan="3" id="four"></td>
+        <td colspan="6" id="five"></td>
+      </tr>
+    </table>
+    <div id="state"></div>
+    <script src="ex12-08a.js"></script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      li {
+        background-color: cadetblue;
+        color: black;
+        margin: 1px;
+      }
+      /* li::marker {
+      } */
+    </style>
+  </head>
+  <body>
+    <script>
+      let list = "";
+
+      list += "<ol type='i'>";
+      for (let i = 0; i < 10; i++) {
+        list += `<li>${i}입니다.</li>`;
+      }
+      list += "</ol>";
+
+      document.body.innerHTML = list;
+    </script>
+    <a href="../index.html">홈으로</a>
+  </body>
+</html>
