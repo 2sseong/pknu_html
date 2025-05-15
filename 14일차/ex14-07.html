@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let startIn = +prompt("시작할 숫자를 입력하세요");
+      let endIn = +prompt("끝낼 숫자를 입력하세요");
+      if (startIn > endIn) {
+        alert("시작 숫자가 더 작습니다");
+      } else {
+        output = 0;
+        for (let i = startIn; i <= endIn; i++) {
+          output += i;
+        }
+        console.log(
+          `${startIn}~${endIn}까지 숫자를 모두 더하면 ${output}입니다`
+        );
+      }
+    </script>
+  </head>
+  <body>
+    <a href="../index.html">홈으로</a>
+  </body>
+</html>
