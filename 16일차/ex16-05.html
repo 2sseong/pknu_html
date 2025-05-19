@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const show = function () {
+        alert("알림창이 보여집니다.");
+      };
+      const 인사 = function (v) {
+        console.log(v.value);
+        console.log(v.id);
+        console.log(v.name);
+      };
+    </script>
+  </head>
+  <body>
+    <a href="../index.html">홈으로</a> <br />
+    <button onclick="show()">알림창</button>
+    <button id="h-id" name="okok" value="hello" onclick="인사(this)">
+      인사
+    </button>
+  </body>
+</html>
