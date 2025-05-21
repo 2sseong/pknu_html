@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //타이머 응용 재귀함수사용
+      let num = 0;
+      const fn1 = () =>
+        setTimeout(() => {
+          document.write(`${++num}반복중...<br>`);
+          fn1();
+        }, 1000);
+      fn1();
+    </script>
+  </head>
+  <body>
+    <a href="../index.html">홈으로</a>
+  </body>
+</html>

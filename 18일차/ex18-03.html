@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function pt(name) {
+        console.log(name, "안녕");
+      }
+      setTimeout(function () {
+        pt("홍길동");
+      }, 1000);
+
+      setTimeout(() => pt("홍"), 2000);
+
+      setTimeout(pt, 3000);
+
+      addEventListener("click", pt);
+    </script>
+  </head>
+  <body>
+    <a href="../index.html">홈으로</a>
+    <h1>저는 곧 변합니다</h1>
+    <script>
+      const cg = () => {
+        const hh = document.querySelector("h1");
+        hh.textContent = "변했어요";
+      };
+
+      setTimeout(cg, 2000);
+      // 방식2
+      setTimeout(
+        () => (document.querySelector("h1").textContent = "메롱"),
+        4000
+      );
+      // 방식3 - 인자넣기
+      const cc = (text) => {
+        const hh = document.querySelector("h1");
+        hh.textContent = text;
+      };
+      setTimeout(() => {
+        cc("변해요");
+      }, 5000);
+
+      setTimeout(cc, 7000, "zzz");
+    </script>
+  </body>
+</html>

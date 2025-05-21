@@ -18,14 +18,15 @@
     ></textarea>
 
     <script>
+      const textArea = document.querySelector("textarea");
       function updateText() {
-        const textArea = document.querySelector("textarea");
         const count = document.querySelector("#count");
         count.textContent = `글자수 :${textArea.value.length}`;
         if (textArea.value.length == 100) {
           alert("100자 이내로 작성해 주세요");
         }
       }
+      // textArea.addEventListener("keyup", updateText);
     </script>
   </body>
 </html>

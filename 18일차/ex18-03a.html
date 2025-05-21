@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="../index.html">홈으로</a>
+    <button>주기 타이머 동작</button>
+    <button>주기 타이머 정지</button>
+    <button>alert버튼</button>
+    <button>console.log버튼</button>
+    <button>화면지우기</button>
+    <div></div>
+    <script>
+      const btn = document.querySelectorAll("button");
+      console.log(btn[0], typeof btn, Array.isArray(btn));
+      let timeId;
+      const div = document.querySelector("div");
+
+      const timeOn = () => {
+        timeId = setInterval(() => {
+          div.innerHTML += "계속진행중...<br>";
+        }, 1000);
+      };
+      const timeOff = () => {
+        clearInterval(timeId);
+      };
+      const clearDoc = () => {
+        div.innerHTML = "";
+      };
+
+      btn[0].addEventListener("click", timeOn);
+      btn[1].addEventListener("click", timeOff);
+      btn[2].addEventListener("click", () => alert("가짜버튼1"));
+      btn[3].addEventListener("click", () => console.log("가짜버튼2"));
+      btn[4].addEventListener("click", clearDoc);
+
+      //   유사배열을 진짜배열로 바꾸기
+      const realArray = Array.from(btn);
+      console.log(realArray, Array.isArray(realArray));
+      //   const fn1 = () => document.write("반가워요.<hr>");
+      //   const t1 = setInterval(fn1, 2000);
+      //   console.log(t1);
+
+      //   setTimeout(clearInterval, 8000, t1);
+    </script>
+  </body>
+</html>
