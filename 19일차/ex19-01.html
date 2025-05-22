@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const arr = [11, 22, 33, 44, 55, 66, 77, 88, 99];
+      // arr.forEach(function (value, index, array) {
+      //   console.log(value);
+      //   console.log(index);
+      //   console.log(array);
+      // });
+      arr.forEach((v, i) => console.log(`인덱스는${i}고 값은 ${v}`));
+
+      const array = [];
+      arr.forEach((v) => array.push(v * 2));
+      console.log(array);
+    </script>
+  </head>
+  <body>
+    <a href="../index.html">홈으로</a>
+    <img src="" alt="" class="rect" />
+    <img src="" alt="" class="rect" />
+    <img src="" alt="" class="rect" />
+    <img src="" alt="" class="rect" />
+    <img src="" alt="" class="rect" />
+    <img src="" alt="" class="rect" />
+    <img src="" alt="" class="rect" />
+    <script>
+      const rects = document.querySelectorAll(".rect");
+      rects.forEach((a, b) => {
+        const width = (b + 1) * 100;
+        const url = `https://placecats.com/${width}/300`;
+        a.src = url;
+        console.log(a);
+      });
+    </script>
+  </body>
+</html>

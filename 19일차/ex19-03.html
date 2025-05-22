@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 1부터 100까지 1씩 증가하는 배열을 만들어라
+      const arr = Array(100)
+        .fill(0)
+        .map((v, i) => i + 1);
+      console.log(arr);
+
+      // 홀수만 배열로 뽑아내라
+      const ft = (v) => v % 2 == 0;
+      const odd = arr.filter(ft);
+      console.log(odd);
+
+      // 1부터 100까지 중 3의 배수에 '짝' 5의 배수에는 '오~' 15의 배수에는 '아싸'
+      const arr1 = Array(100)
+        .fill(0)
+        .map((v, i) => {
+          v = i + 1;
+          if ((i + 1) % 3 == 0) {
+            v = "짝";
+          }
+          if ((i + 1) % 5 == 0) {
+            v = "오~";
+          }
+
+          if ((i + 1) % 15 == 0) {
+            v = "아싸";
+          }
+          return v;
+        });
+      console.log(arr1);
+    </script>
+  </head>
+  <body>
+    <a href="../index.html">홈으로</a>
+  </body>
+</html>
