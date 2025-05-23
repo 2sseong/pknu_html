@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const str = "        저는 공백을 가지고 있어요?            ";
+      console.log(str);
+      console.log(str.trim());
+      const data = "   안   ,    녕 ,하      ,세,요,1,2,3,4,5";
+      const data2 = "안*녕*하*세*요*ㅋ*ㅋ*ㅋ*ㅋ";
+      const fixData = data.split(",");
+      const fixData2 = data2.trim().split("*");
+      const ffixData = fixData.map((v) => v.trim());
+      console.log(ffixData);
+      console.log(fixData2);
+    </script>
+  </head>
+  <body>
+    <a href="../index.html">홈으로</a>
+  </body>
+</html>

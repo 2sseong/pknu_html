@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const h1 = document.createElement("h1");
+        const inp = document.createElement("input");
+        const btn = document.createElement("button");
+        const hr = document.createElement("hr");
+        const ul = document.createElement("ul");
+
+        document.body.append(h1, inp, btn, hr, ul);
+        // document.body.appendChild(h1);
+        // document.body.appendChild(inp);
+        // document.body.appendChild(btn);
+        // document.body.appendChild(hr);
+        // document.body.appendChild(ul);
+
+        btn.textContent = "생성";
+        h1.textContent = "toDo 리스트 생성";
+
+        const inpv = () => console.log(inp.value);
+        btn.addEventListener("click", () => {
+          const li = document.createElement("li");
+          ul.appendChild(li);
+          li.textContent = inp.value;
+        });
+
+        // items.forEach((v) => {
+        //   const li = document.createElement("li");
+        //   ul.appendChild(li);
+        //   li.textContent;
+        // });
+      });
+    </script>
+  </head>
+  <body>
+    <a href="../index.html">홈으로</a>
+  </body>
+</html>

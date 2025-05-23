@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Diphylleia&family=Grandiflora+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      li {
+        background-color: beige;
+        margin: 5px 0;
+        padding: 10px;
+        border-radius: 10px;
+
+        font-family: "Playfair Display", serif;
+      }
+      li:hover {
+        background-color: rgb(122, 122, 107);
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const items = [
+          "Apple",
+          "Banana",
+          "strawberry",
+          "Cherry",
+          "Grapes",
+          "Orange",
+          "Mango",
+          "Peach",
+          "pineapple",
+        ];
+
+        const ul = document.createElement("ul");
+
+        document.body.appendChild(ul);
+        items.forEach((v) => {
+          const li = document.createElement("li");
+          ul.appendChild(li);
+          li.textContent = v;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <a href="../index.html">홈으로</a>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      /* 메소드 내부에서의 this*/
+      const pet = {
+        name: "구름",
+        eat: function (food) {
+          document.write(`${this.name}은/는 ${food}을/를 먹습니다`);
+        },
+      };
+      pet.eat("밥");
+
+      //
+      const obj = {};
+      obj.a = 1;
+      obj.b = 2;
+      obj["c"] = function () {
+        return this.b;
+      };
+      obj.d = function () {
+        console.log(this.a);
+      };
+      obj.e = "실수";
+
+      console.log(obj);
+      console.log(obj.c());
+      obj.d();
+
+      //삭제
+      delete obj.e;
+      console.log(obj);
+
+      //p250
+      const student = {};
+      student.이름 = "윤인성";
+      student.취미 = "악기";
+      student.장래희망 = "생명공학자";
+
+      console.log(JSON.stringify(student, null, 2));
+
+      //
+      const obj2 = {
+        //함수 안의 함수에 this사용해서 undefined 나옴
+        a: function () {
+          setTimeout(function () {
+            console.log(1, this.문서);
+          }, 2000);
+        },
+        // 근데 ()=>{}함수는 사용 가능
+        b: function () {
+          setTimeout(() => {
+            console.log(2, this.문서);
+          }, 2000);
+        },
+        문서: "접니다.",
+      };
+      obj2.a();
+      obj2.b();
+      console.log(3, obj2.문서);
+
+      // p252
+      const obj3 = {
+        a: function () {
+          console.log(this);
+        },
+        b: () => {
+          console.log(this);
+        },
+      };
+      obj3.a();
+      obj3.b();
+    </script>
+  </head>
+  <body>
+    <a href="../index.html">홈으로</a>
+  </body>
+</html>
