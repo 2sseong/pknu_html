@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        position: relative;
+      }
+      .pac {
+        margin: 0;
+        /* background-color: darksalmon; */
+        /* border-radius: 50%; */
+        /* font-size: 3rem; */
+        position: absolute;
+        padding: 20px 30px 30px;
+        /* transform: translate(400px, 400px); */
+        /* user-select: none; */
+        /* transform-origin: center; */
+      }
+      .ghost {
+        margin: 0;
+        position: absolute;
+      }
+    </style>
+    <script>
+      let status = true;
+      document.addEventListener("DOMContentLoaded", () => {
+        const a = document.createElement("a");
+        a.href = "../index.html";
+        a.textContent = "홈으로";
+        document.body.appendChild(a);
+
+        const h1 = document.createElement("h1");
+        h1.textContent = "잠시후 시작됩니다.";
+        document.body.appendChild(h1);
+
+        const pac = document.createElement("img");
+        pac.style.width = "50px";
+        pac.style.height = "50px";
+        pac.classList.add("pac");
+        document.body.appendChild(pac);
+
+        const ghost = document.createElement("img");
+        ghost.style.width = "50px";
+        ghost.style.height = "50px";
+        ghost.classList.add("ghost");
+        document.body.appendChild(ghost);
+
+        let interval1 = setInterval(() => {
+          if (status) {
+            pac.src = `../img/pac1.png`;
+            ghost.src = `../img/ghost1.png`;
+          } else {
+            pac.src = `../img/pac2.png`;
+            ghost.src = `../img/ghost2.png`;
+          }
+          status = !status;
+        }, 200);
+        let gx = (gy = 0);
+
+        let interval2 = setInterval(() => {
+          gx = Math.floor(Math.random() * 1800);
+          gy = Math.floor(Math.random() * 800);
+          ghost.style.left = `${gx}px`;
+          ghost.style.top = `${gy}px`;
+        }, 10000);
+
+        setTimeout(() => {
+          h1.textContent = "시작!";
+        }, 10000);
+
+        let px = (py = 10);
+        const step = 40;
+
+        const move = () => {
+          pac.style.left = `${px * step}px`;
+          pac.style.top = `${py * step}px`;
+        };
+        move(); // 최초실행으로 위치설정
+        let score = 0;
+
+        window.addEventListener("keydown", (event) => {
+          if (event.key == "ArrowLeft") {
+            px -= 1;
+            pac.style.transform = "scaleX(-1)";
+          }
+
+          if (event.key == "ArrowRight") {
+            px += 1;
+            pac.style.transform = "rotate(0)";
+          }
+
+          if (event.key == "ArrowUp") {
+            py -= 1;
+            pac.style.transform = "rotate(270deg)";
+          }
+
+          if (event.key == "ArrowDown") {
+            py += 1;
+            pac.style.transform = "rotate(90deg)";
+          }
+
+          //   console.log(event.key);
+          move();
+          console.log(
+            +pac.style.top.split("px")[0] <
+              +ghost.style.top.split("px")[0] + 10,
+            +pac.style.top.split("px")[0] >
+              +ghost.style.top.split("px")[0] - 10,
+            +pac.style.left.split("px")[0] <
+              +ghost.style.left.split("px")[0] + 10,
+            +pac.style.top.split("px")[0] > +ghost.style.top.split("px")[0] - 10
+          );
+
+          //점수 추가
+          if (
+            +pac.style.top.split("px")[0] <
+              +ghost.style.top.split("px")[0] + 30 &&
+            +pac.style.top.split("px")[0] >
+              +ghost.style.top.split("px")[0] - 30 &&
+            +pac.style.left.split("px")[0] <
+              +ghost.style.left.split("px")[0] + 30 &&
+            +pac.style.left.split("px")[0] >
+              +ghost.style.left.split("px")[0] - 30
+          ) {
+            score += 1;
+            gx = Math.floor(Math.random() * 1800);
+            gy = Math.floor(Math.random() * 800);
+            ghost.style.left = `${gx}px`;
+            ghost.style.top = `${gy}px`;
+            h1.textContent = `${score}점`;
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- <a href="../index.html">홈으로</a> -->
+  </body>
+</html>
