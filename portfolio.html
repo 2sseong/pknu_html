@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/typeit@8.8.7/dist/index.umd.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      div {
+        border: 1px solid black;
+      }
+      body {
+        background-color: #f9f7f7;
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        text-decoration: underline;
+      }
+
+      .bar {
+        position: fixed;
+        background-color: #112d4e;
+        color: #f9f7f7;
+        width: 100%;
+        display: flex;
+        font-size: 1.5rem;
+        justify-content: space-between;
+        align-items: center;
+        height: 5%;
+      }
+
+      .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 70vh;
+        background: url(https://d2v80xjmx68n4w.cloudfront.net/articles/Nzeiy1703739868.jpg?w=1492)
+          no-repeat;
+        background-color: #112d4eb4;
+        background-size: 100% 100%;
+        background-blend-mode: multiply;
+        color: white;
+      }
+      .titlename {
+        font-size: 3rem;
+        opacity: 0;
+        margin-top: 0;
+        transition: 0.5s ease;
+      }
+      .show-titlename {
+        margin-top: -200px;
+        opacity: 1;
+      }
+
+      .about-section {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border: 1px solid black;
+        text-align: center;
+        flex-direction: column;
+        height: 30vh;
+      }
+      .about-table {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 1.5rem;
+        width: 70%;
+        column-gap: 2rem;
+        border: 1px solid black;
+      }
+      .about-info {
+        display: flex;
+        column-gap: 3rem;
+        margin: auto;
+        width: 40%;
+        border: 1px solid black;
+      }
+      i {
+        font-size: 40px;
+        width: 40px;
+      }
+
+      section {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+        color: #112d4e;
+        background-color: #f9f7f7;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bar">
+      <div>portfolio</div>
+      <div>menu</div>
+    </div>
+    <sectionn class="title"
+      ><div class="titlename">취업시켜주세요</div>
+      <div class="titlesub"></div
+    ></sectionn>
+    <div class="about-section">
+      <div>
+        <h1>About me</h1>
+      </div>
+      <div class="about-table">
+        <div class="about-info">
+          <div><i class="fa-solid fa-user"></i></div>
+          <div>이름<br />이성훈</div>
+        </div>
+        <div class="about-info">
+          <div><i class="fa-solid fa-envelope"></i></div>
+          <div>e-mail <br />lsh999051@gmail.com</div>
+        </div>
+        <div class="about-info">
+          <div><i class="fa-solid fa-phone"></i></div>
+          <div>전화번호 <br />010-9921-9051</div>
+        </div>
+        <div class="about-info">
+          <div><i class="fa-solid fa-location-dot"></i></div>
+          <div>지역<br />부산광역시 남구</div>
+        </div>
+      </div>
+    </div>
+    <section class="section2">skill</section>
+    <section class="section3">career</section>
+    <section class="section4">project</section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const titleName = document.body.querySelector(".titlename");
+        const titleSub = document.body.querySelector(".titlesub");
+        const time1 = setTimeout(() => {
+          titleName.classList.add("show-titlename");
+        }, 500); // 0.5초 후에 클래스 추가
+
+        const typeIt = new TypeIt(".titlesub", {
+          speed: 50,
+          startDelay: 2000,
+        })
+          .type("회사를 위해서 개처럼 일하겠습니다 멍멍!", { delay: 1000 })
+          //   .move(-13, { delay: 1000 })
+          .delete(1, { delay: 100 })
+          .delete(1, { delay: 100 })
+          .delete(1, { delay: 100 })
+          .type("왈왈!!!", { delay: 300 })
+          .delete(1, { delay: 100 })
+          .delete(1, { delay: 100 })
+          .delete(1, { delay: 100 })
+          .delete(1, { delay: 100 })
+          .delete(1, { delay: 100 })
+          .type("컹컹!!!!!", { delay: 600 })
+          //   .delete(1, { delay: 100 })
+          .go();
+        const time2 = setTImeout(() => {}, 1000);
+      });
+    </script>
+  </body>
+</html>
