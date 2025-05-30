@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        /* width: 100%; */
+        max-width: 500px;
+        border: 2px solid #aaa;
+        overflow: hidden; /*사이즈 넘으면 안보이게*/
+        border-radius: 20px;
+        position: relative;
+      }
+
+      .contents {
+        display: flex;
+        transition: 0.5s ease;
+      }
+      .contents img {
+        width: 500px;
+        object-fit: cover;
+        border-right: 2px solid #eee;
+      }
+      .controls {
+        display: flex;
+        justify-content: space-between;
+        width: 320px;
+      }
+      #tLeft,
+      #tRight {
+        width: 50%;
+        height: 100%;
+        background-color: coral;
+        position: absolute;
+        top: 0;
+      }
+      #tLeft {
+        background-color: rgba(255, 0, 0, 0.493);
+        left: 0;
+      }
+      #tRight {
+        background-color: rgba(0, 0, 255, 0.521);
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="../index.html">홈으로</a>
+
+    <div id="container">
+      <div class="contents"></div>
+      <div>
+        <div id="tLeft"></div>
+        <div id="tRight"></div>
+      </div>
+    </div>
+    <script>
+      const contents = document.querySelector(".contents");
+      for (let i = 0; i < 10; i++) {
+        const img = document.createElement("img");
+        contents.appendChild(img);
+        img.src = `https://placecats.com/${500 + i * 10}/800`;
+      }
+
+      const img = document.querySelectorAll("img");
+      const tLeft = document.getElementById("tLeft");
+      const tRight = document.getElementById("tRight");
+      const positions = [];
+      window.addEventListener("load", () => {
+        let pos = 0;
+        // positions.push(pos);
+        img.forEach((v, i) => {
+          positions.push(pos);
+          pos += v.offsetWidth;
+        });
+        console.log(positions);
+      });
+
+      let imgOn = 0;
+
+      const sLeft = () => {
+        if (imgOn > 0) {
+          imgOn--;
+          console.log(positions[imgOn]);
+          contents.style.transform = `translateX(-${positions[imgOn]}px)`;
+        }
+      };
+
+      const sRight = () => {
+        if (imgOn < positions.length - 1) {
+          imgOn++;
+          console.log(positions[imgOn]);
+          contents.style.transform = `translateX(-${positions[imgOn]}px)`;
+        }
+      };
+
+      tLeft.addEventListener("click", sLeft);
+      tRight.addEventListener("click", sRight);
+    </script>
+  </body>
+</html>

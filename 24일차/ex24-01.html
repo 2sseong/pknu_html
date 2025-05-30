@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        /* width: 100%; */
+        max-width: 320px;
+        border: 2px solid #aaa;
+        overflow: hidden; /*사이즈 넘으면 안보이게*/
+        border-radius: 20px;
+        position: relative;
+      }
+
+      .contents {
+        display: flex;
+        transition: 0.5s ease;
+      }
+      .contents img {
+        width: 320px;
+        object-fit: cover;
+        border-right: 2px solid #eee;
+      }
+      .controls {
+        display: flex;
+        justify-content: space-between;
+        width: 320px;
+      }
+      button {
+        background-color: rgb(72, 72, 105);
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+      }
+      button:disabled {
+        background-color: rgb(51, 43, 43);
+        color: #777;
+        cursor: not-allowed;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="../index.html">홈으로</a>
+
+    <div id="container">
+      <div class="contents">
+        <img src="https://placecats.com/360/200" />
+        <img src="https://placecats.com/370/200" />
+        <img src="https://placecats.com/380/200" />
+        <img src="https://placecats.com/390/200" />
+      </div>
+    </div>
+    <div class="controls">
+      <button id="btn-left" onclick="sLeft()">이전</button>
+      <button id="btn-right" onclick="sRight()">다음</button>
+    </div>
+
+    <script>
+      const contents = document.querySelector(".contents");
+      const img = document.querySelectorAll("img");
+      const btnLeft = document.getElementById("btn-left");
+      const btnRight = document.getElementById("btn-right");
+      const positions = [];
+      let imgOn = 0;
+
+      window.addEventListener("load", () => {
+        let pos = 0;
+        // positions.push(pos);
+        img.forEach((v, i) => {
+          positions.push(pos);
+          pos += v.offsetWidth;
+        });
+        updateBtn();
+        console.log(positions);
+      });
+
+      const sLeft = () => {
+        if (imgOn > 0) {
+          imgOn--;
+          console.log(positions[imgOn]);
+          contents.style.transform = `translateX(-${positions[imgOn]}px)`;
+        }
+        updateBtn();
+      };
+
+      const sRight = () => {
+        if (imgOn < positions.length - 1) {
+          imgOn++;
+          console.log(positions[imgOn]);
+          contents.style.transform = `translateX(-${positions[imgOn]}px)`;
+        }
+        updateBtn();
+      };
+
+      const updateBtn = () => {
+        btnLeft.disabled = imgOn === 0;
+        btnRight.disabled = imgOn === positions.length - 1;
+      };
+    </script>
+  </body>
+</html>

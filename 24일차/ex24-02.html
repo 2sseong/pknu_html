@@ -12,17 +12,49 @@
         padding: 2rem;
       }
       .chat-container {
-        width: 600px;
-        height: 500px;
+        width: 100%;
+        box-sizing: border-box;
+        /* height: 500px; */
+        /* transform: translateY(50%); */
         margin: auto;
         background-color: white;
-        padding: 1rem 4rem;
-        border-radius: 15px;
+        padding: 1rem 3rem 0 4rem;
+        border-radius: 15px 15px 0 0;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
         display: flex;
         flex-direction: column;
         overflow-y: auto;
+        flex: 7;
       }
+
+      .chat-input {
+        flex: 1;
+        width: 100%;
+        background-color: #555;
+        display: flex;
+        justify-content: stretch;
+      }
+
+      textarea {
+        width: 70%;
+        outline: none;
+        border: none;
+        background-color: aliceblue;
+        resize: none;
+        padding: 30px;
+        font-size: 1.2rem;
+        color: rgb(73, 66, 141);
+        font-weight: bold;
+      }
+      button {
+        width: 30%;
+        font-weight: bold;
+        font-size: 1.2rem;
+        border: none;
+        background-color: rgb(245, 245, 77);
+        cursor: pointer;
+      }
+
       .message {
         display: flex;
         margin-bottom: 1.2rem;
@@ -55,49 +87,44 @@
       }
 
       .chat-container::-webkit-scrollbar {
-        background-color: white;
+        background-color: rgb(209, 9, 9);
       }
       .chat-container::-webkit-scrollbar-thumb {
         background-color: rgb(190, 185, 255);
         border-radius: 6px;
+      }
+      .box {
+        width: 500px;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* border: 1px solid black; */
       }
     </style>
   </head>
   <body>
     <a href="../index.html">홈으로</a>
     <!-- div.chat-container>div.message.bot>div.avatar>div.name{myBot}+div.bubble{안녕하세요. 무엇을 도와드릴까요}^^div.message.user>div.avatar>div.name{myBot}+div.bubble{안녕하세요. 무엇을 도와드릴까요} -->
-    <div class="chat-container">
-      <div class="message bot">
-        <div>
-          <div class="name">myBot</div>
-          <div class="bubble">안녕하세요. 무엇을 도와드릴까요</div>
+    <div class="box">
+      <div class="chat-container">
+        <div class="message bot">
+          <div>
+            <div class="name">myBot</div>
+            <div class="bubble">안녕하세요. 무엇을 도와드릴까요</div>
+          </div>
         </div>
-      </div>
-      <div class="message user">
-        <div>
-          <div class="name">나</div>
-          <div class="bubble">가나다라마바사아자차카타파하</div>
-        </div>
-      </div>
-      <div class="message bot">
-        <div>
-          <div class="name">myBot</div>
-          <div class="bubble">
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+        <div class="message user">
+          <div>
+            <div class="name">나</div>
+            <div class="bubble">가나다라마바사아자차카타파하</div>
           </div>
         </div>
       </div>
-      <div class="message user">
-        <div>
-          <div class="name">나</div>
-          <div class="bubble">ㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱ</div>
-        </div>
-      </div>
-      <div class="message bot">
-        <div>
-          <div class="name">myBot</div>
-          <div class="bubble">ㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴ</div>
-        </div>
+
+      <div class="chat-input">
+        <textarea name="" id="" placeholder="메시지를 입력하세요"></textarea
+        ><button id="send-btn">전송</button>
       </div>
     </div>
   </body>
