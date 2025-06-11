@@ -113,3 +113,110 @@
   - f12 -> Network -> formResponse?에서도 확인 가능
 - GET(읽기) 물음표를 기준으로 뒤에 커리를 넣음
 - POST(쓰기) 폼데이터에 담겨서 전송
+
+# React
+
+## CDN, CRA, VITE
+
+### CDN_React 사용
+
+`https://ko.legacy.reactjs.org/docs/cdn-links.html`에서
+
+```
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+```
+
+### Docker로 node.js 환경 만들기
+
+```
+# .devcontainer 하위에/ Dockerfile
+
+FROM node:latest
+
+RUN apt update && \
+    apt install -y nano && \
+    rm -rf /var/lib/apt/lists/*
+
+WORKDIR /workspace
+# 명시적으로 외부 3000포트 쓰겠다는 의지
+EXPOSE 3000
+```
+
+// .devcontainer 하위에 devcontainer.json
+
+```
+
+{
+  "name": "Nodejs Container",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash"
+  },
+  "extensions": [
+    "ms-azuretools.vscode-docker"
+  ],
+  "forwardPorts": [
+    5500,
+    3000,
+    5173
+  ],
+  "postCreateCommand": "echo 'Dev Container Ready!'"
+}
+
+```
+
+### CRA react
+
+`npx create-react-app cra_01`
+
+`cra_01/src# npm start`
+
+- ![alt text](img/cra01.png)
+- 삭제해도됨
+
+### React 라우터
+
+- index.js에
+
+  - `import {BrowserRouter} from 'react-router-dom'`
+
+    - ```
+          const root = ReactDOM.createRoot(document.getElementById('root'));
+            root.render(
+              <React.StrictMode>
+                <BrowserRouter>
+                  <App />
+                </BrowserRouter>
+              </React.StrictMode>
+            );
+
+      ```
+
+- 터미널에서 `CRA_react/cra_02# npm i react-router-dom` 설치
+- App.js에 `import { Link, Routes, Route } from "react-router-dom"`
+- index.js에 `import { BrowserRouter } from 'react-router-dom'`
+
+- Crypto 사용
+  - 터미널에서 `cra_02/src# npm i crypto-js`
+
+### VITE react
+
+- VITE react시작 명령어
+  - vscode vite폴더 터미널에서`npm create vite@latest (vite_01)이름`
+  - Select a framework `react` 선택
+  - Select a variant `JavaScript` 선택
+  - ```
+    cd vite_01
+    npm install
+    npm run dev
+    ```
+  - package.json에서 `"script"{"dev":}"vite"`->`"script"{"dev":}"vite --host"`--host 추가
+
+##### SPA(Single Page Application)정리
+
+- Angular
+- Vuejs
+- React

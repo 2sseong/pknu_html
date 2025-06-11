@@ -30,23 +30,28 @@
         background-color: #112d4e;
         color: #f9f7f7;
         width: 100%;
+        height: 5%;
+      }
+      .bartext {
         display: flex;
         font-size: 1.5rem;
         justify-content: space-between;
-        padding: 0 10px
         align-items: center;
-        height: 5%;
+        margin: 0 30px 0 30px;
       }
 
+      .titleimg {
+        background: url(https://d2v80xjmx68n4w.cloudfront.net/articles/Nzeiy1703739868.jpg?w=1492)
+          no-repeat;
+        overflow: hidden;
+      }
       .title {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         width: 100%;
-        height: 70vh;
-        background: url(https://d2v80xjmx68n4w.cloudfront.net/articles/Nzeiy1703739868.jpg?w=1492)
-          no-repeat;
+        height: 100vh;
         background-color: #112d4eb4;
         background-size: 100% 100%;
         background-blend-mode: multiply;
@@ -107,13 +112,18 @@
   </head>
   <body>
     <div class="bar">
-      <div>portfolio</div>
-      <div>menu</div>
+      <div class="bartext">
+        <div>portfolio</div>
+        <div>menu</div>
+      </div>
     </div>
-    <sectionn class="title"
+    <sectionn class="title titleimg"
       ><div class="titlename">취업시켜주세요</div>
       <div class="titlesub"></div
     ></sectionn>
+    <section class="section2">skill</section>
+    <section class="section3">career</section>
+    <section class="section4">project</section>
     <div class="about-section">
       <div>
         <h1>About me</h1>
@@ -137,9 +147,6 @@
         </div>
       </div>
     </div>
-    <section class="section2">skill</section>
-    <section class="section3">career</section>
-    <section class="section4">project</section>
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
