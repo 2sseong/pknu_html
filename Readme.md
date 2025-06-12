@@ -116,6 +116,13 @@
 
 # React
 
+### Node.js
+
+- `https://expressjs.com/ko/`에서 코드 불러옴
+- server1.js에 붙여넣기
+- 파일 폴더 터미널에서 `npm i express`설치 ,`node server1.js`
+- vite 폴더 터미널에서`VITE_react/vite_01# npm run build` 실행 후 assets폴더 nodejs/public로 이동
+
 ## CDN, CRA, VITE
 
 ### CDN_React 사용
